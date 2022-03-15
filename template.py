@@ -51,7 +51,7 @@ class MyGame(arcade.Window):
         self.player_list = arcade.SpriteList()
 
         # Set up the player
-        self.player_sprite = arcade.Sprite("C:/Users/flipp/OneDrive/Pictures/blocky.png",
+        self.player_sprite = arcade.Sprite("Platformer/assets/Blocky.png",
                                            constants.SPRITE_SCALING)
         self.player_sprite.center_x = 2 * constants.GRID_PIXEL_SIZE
         self.player_sprite.center_y = 3 * constants.GRID_PIXEL_SIZE
