@@ -58,11 +58,23 @@ class MyGame(arcade.Window):
         self.player_list.append(self.player_sprite)
 
         # Create floor
-        for i in range(20):
-            wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
-            wall.bottom = 0
-            wall.center_x = i * constants.GRID_PIXEL_SIZE
-            self.static_wall_list.append(wall)
+        for i in range(200):
+            if i % 2 == 0:
+                wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
+                wall.bottom = 0
+                wall.center_x = i * constants.GRID_PIXEL_SIZE
+                self.static_wall_list.append(wall)
+            elif i % 5 == 0:
+                wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
+                # wall.center_y = i * constants.GRID_PIXEL_SIZE
+                wall.center_x = i * constants.GRID_PIXEL_SIZE
+                wall.boundary_left = i-2 * constants.GRID_PIXEL_SIZE
+                wall.boundary_right = i+5 * constants.GRID_PIXEL_SIZE
+                wall.change_x = 2 * constants.SPRITE_SCALING
+                self.moving_wall_list.append(wall)
+
+            else:
+                pass
 
         # Create platform side to side
         wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
