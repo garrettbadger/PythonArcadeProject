@@ -58,23 +58,23 @@ class MyGame(arcade.Window):
         self.player_list.append(self.player_sprite)
 
         # Create floor
-        for i in range(30):
-            wall = arcade.Sprite(":resources:images/tiles/grassMid.png", constants.SPRITE_SCALING)
+        for i in range(20):
+            wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
             wall.bottom = 0
             wall.center_x = i * constants.GRID_PIXEL_SIZE
             self.static_wall_list.append(wall)
 
         # Create platform side to side
-        wall = arcade.Sprite(":resources:images/tiles/grassMid.png", constants.SPRITE_SCALING)
+        wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
         wall.center_y = 3 * constants.GRID_PIXEL_SIZE
-        wall.center_x = 3 * constants.GRID_PIXEL_SIZE
+        wall.center_x = 1 * constants.GRID_PIXEL_SIZE
         wall.boundary_left = 2 * constants.GRID_PIXEL_SIZE
         wall.boundary_right = 5 * constants.GRID_PIXEL_SIZE
         wall.change_x = 2 * constants.SPRITE_SCALING
         self.moving_wall_list.append(wall)
 
         # Create platform side to side
-        wall = arcade.Sprite(":resources:images/tiles/grassMid.png", constants.SPRITE_SCALING)
+        wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
         wall.center_y = 3 * constants.GRID_PIXEL_SIZE
         wall.center_x = 7 * constants.GRID_PIXEL_SIZE
         wall.boundary_left = 5 * constants.GRID_PIXEL_SIZE
@@ -83,7 +83,7 @@ class MyGame(arcade.Window):
         self.moving_wall_list.append(wall)
 
         # Create platform moving up and down
-        wall = arcade.Sprite(":resources:images/tiles/grassMid.png", constants.SPRITE_SCALING)
+        wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
         wall.center_y = 5 * constants.GRID_PIXEL_SIZE
         wall.center_x = 5 * constants.GRID_PIXEL_SIZE
         wall.boundary_top = 8 * constants.GRID_PIXEL_SIZE
@@ -92,7 +92,7 @@ class MyGame(arcade.Window):
         self.moving_wall_list.append(wall)
 
         # Create platform moving diagonally
-        wall = arcade.Sprite(":resources:images/tiles/grassMid.png", constants.SPRITE_SCALING)
+        wall = arcade.Sprite("Platformer/assets/tile.png", constants.SPRITE_SCALING)
         wall.center_y = 5 * constants.GRID_PIXEL_SIZE
         wall.center_x = 8 * constants.GRID_PIXEL_SIZE
         wall.boundary_left = 7 * constants.GRID_PIXEL_SIZE
@@ -110,7 +110,7 @@ class MyGame(arcade.Window):
                                            gravity_constant=constants.GRAVITY)
 
         # Set the background color
-        arcade.set_background_color(arcade.color.AMAZON)
+        arcade.set_background_color(arcade.color.GRAY)
 
         self.game_over = False
 
