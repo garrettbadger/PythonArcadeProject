@@ -17,7 +17,6 @@ Arcade Library
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Arcade api](https://api.arcade.academy/en/latest/index.html)
 * [Real Python](https://realpython.com/arcade-python-game-framework/)
 
